@@ -19,7 +19,7 @@ def solution(answers):
 
     answer = [0,0,0]
     result = []
-    for j in range(0,2):
+    for j in range(0,3):
         for h in range(len(answers)):
             if math[j][h] == answers[h]:
                 print(math[j][h])
