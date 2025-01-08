@@ -18,9 +18,15 @@ def solution(answers):
             math[i] = math[i] + math[i]
 
     answer = [0,0,0]
+    result = []
     for j in range(0,2):
         for h in range(len(answers)):
-            if math[j][h-1] == answers[h-1]:
-                print(math[j][h-1])
+            if math[j][h] == answers[h]:
+                print(math[j][h])
                 answer[j] += 1
-    return answer
+                
+    for a in range(len(answer)):
+        if answer[a] == max(answer):
+            result.append(a+1)
+
+    return result
