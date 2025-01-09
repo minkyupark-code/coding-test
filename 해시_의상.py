@@ -25,8 +25,21 @@ clothes의 모든 원소는 문자열로 이루어져 있습니다.
 '''
 
 def solution(clothes):
-    clothes_table = {}
-    for i in clothes:
-        clothes_table[i[1]].append(i[0])
-        
-    return clothes_table
+    clothes_table = []
+    for i in range(len(clothes)):
+        clothes_table.append(clothes[i][1])
+    
+    b_count = {}
+
+    for i in clothes_table:
+        try:
+            b_count[i] += 1
+        except:
+            b_count[i] = 1
+
+    a = 1
+    b = list(b_count.values())
+    for j in range(len(b)):
+        a = a * (b[j] + 1)
+    
+    return a - 1
