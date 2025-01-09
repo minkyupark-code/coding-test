@@ -13,16 +13,15 @@
 def solution(answers):
     math = [[1, 2, 3, 4, 5],[2, 1, 2, 3, 2, 4, 2, 5],[3, 3, 1, 1, 2, 2, 4, 4, 5, 5]]
     
-    for i in range(0,2):
+    for i in range(0,3):
         while len(math[i]) < len(answers):
-            math[i] = math[i] + math[i]
-
+            math[i] += math[i]
+            
     answer = [0,0,0]
     result = []
     for j in range(0,3):
         for h in range(len(answers)):
             if math[j][h] == answers[h]:
-                print(math[j][h])
                 answer[j] += 1
                 
     for a in range(len(answer)):
