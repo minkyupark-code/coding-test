@@ -8,4 +8,9 @@ Leo가 가진 음식의 스코빌 지수를 담은 배열 scoville과 원하는 
 
 def solution(scoville, K):
     answer = 0
+    while (min(scoville) < K):
+        scoville.sort()
+        scoville[1] = scoville[0] + scoville[1] * 2
+        scoville = scoville[1:]
+        answer += 1
     return answer
