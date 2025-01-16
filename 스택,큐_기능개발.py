@@ -23,4 +23,5 @@ def solution(progresses, speeds):
                 answer.append(num)
                 num = 0
                 break
+            
     return answer
