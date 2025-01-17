@@ -6,22 +6,9 @@
 
 def solution(numbers):
     answer = []
-    num = []
-    result = []
-    if numbers[0] == '0':
-        return '0'
     for i in numbers:
-        if len(str(i)) == 1:
-            answer.append(int(str(i) * 4))
-        elif len(str(i)) == 2:
-            answer.append(int(str(i) + str(i)[-1] * 2))
-        elif len(str(i)) == 3:
-            answer.append(int(str(i)[-1] * 1))
-        else:
-            answer.append(i)
+        for i in str(i):
+            answer.append(int(i))
     
-    sorted_numbers = sorted(zip(answer, numbers), reverse=True, key=lambda x: x[0])
-
-    result = ''.join([str(num[1]) for num in sorted_numbers])
     
-    return str(int(result))
+    return answer
