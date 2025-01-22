@@ -10,7 +10,6 @@ def solution(progresses, speeds):
     rel = 0
     num = 0
     count = []
-    result = []
     for i in range(len(speeds)):
         num = 0
         rel = progresses[i]
@@ -18,19 +17,23 @@ def solution(progresses, speeds):
             rel += speeds[i]
             num += 1
         count.append(num)
+    print(count)
         
     num = 1
     
-    for i in range(len(count)):
-        if i < len(count)-1:
-            if count[i] >= count[i+1]:
-                num += 1
-                
-            else:
-                result.append(num)
-                num = 1
+    result = []
+    current_max = count[0]
+    num = 1
+
+    for i in range(1, len(count)):
+        if count[i] <= current_max:
+            num += 1
         else:
             result.append(num)
+            current_max = count[i]
             num = 1
+    
+    result.append(num)
+
             
     return result
