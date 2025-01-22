@@ -7,21 +7,15 @@
 '''
 
 def solution(progresses, speeds):
-    answer = []
-    num = 0
     
-    while(sum(answer) != len(progresses)):
-        for i in range(len(progresses)):
-            progresses[i] = progresses[i] + speeds[i]
-            print(progresses)
+    rel = [i for i in zip(progresses, speeds)]
+    result = 0
+    count = []
+    for i in rel:
+        result = 0
+        while i[0] < 100:
+            i[0] += i[1]
+            result += 1
         
-        for j in range(len(progresses)):
-            if progresses[j] >= 100:
-                num += 1
-                
-            elif len[progresses] == 0 or progresses[j] < 100:
-                answer.append(num)
-                num = 0
-                break
-            
-    return answer
+    
+    return count
