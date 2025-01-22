@@ -18,5 +18,19 @@ def solution(progresses, speeds):
             rel += speeds[i]
             num += 1
         count.append(num)
+        
+    num = 1
     
-    return count
+    for i in range(len(count)):
+        if i < len(count)-1:
+            if count[i] >= count[i+1]:
+                num += 1
+                
+            else:
+                result.append(num)
+                num = 1
+        else:
+            result.append(num)
+            num = 1
+            
+    return result
