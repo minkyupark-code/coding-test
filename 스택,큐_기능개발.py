@@ -7,15 +7,16 @@
 '''
 
 def solution(progresses, speeds):
-    
-    rel = [i for i in zip(progresses, speeds)]
-    result = 0
+    rel = 0
+    num = 0
     count = []
-    for i in rel:
-        result = 0
-        while i[0] < 100:
-            i[0] += i[1]
-            result += 1
-        
+    result = []
+    for i in range(len(speeds)):
+        num = 0
+        rel = progresses[i]
+        while rel < 100:
+            rel += speeds[i]
+            num += 1
+        count.append(num)
     
     return count
