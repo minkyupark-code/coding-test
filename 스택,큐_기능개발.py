@@ -35,5 +35,4 @@ def solution(progresses, speeds):
     
     result.append(num)
 
-            
     return result
