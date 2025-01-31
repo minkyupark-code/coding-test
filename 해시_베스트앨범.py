@@ -22,18 +22,21 @@ def solution(genres, plays):
     
     for i in plays:
         a = plays.index(max(pa))
-        if a == -1:
+        print(a)
+        if a == 0:
             break
         b = [i for i, value in enumerate(genres) if value == genres[a]]
         if len(b) == 1:
             answer.append(c)
         else:
+            print(b)
             b.sort(reverse=True)
+            print(b)
             answer.append(b[0])
             answer.append(b[1])
 
         for j in b:
-            pa[j] = -1
-        print(pa)
+            pa[j] = 0
+
             
     return answer
