@@ -19,11 +19,9 @@ genres와 plays의 길이는 같으며, 이는 1 이상 10,000 이하입니다.
 def solution(genres, plays):
     answer = []
     c = {}
-    d = 0
     pa = plays
     for h in range(len(genres)):
-        c[genres[h]+str(d)] = plays[h]
-        d += 1
+        c[genres[h]].append(plays[h])
     print(c)
     
     for i in plays:
