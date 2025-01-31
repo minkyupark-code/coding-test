@@ -18,20 +18,22 @@ genres와 plays의 길이는 같으며, 이는 1 이상 10,000 이하입니다.
 
 def solution(genres, plays):
     answer = []
+    pa = plays
     
     for i in plays:
-        a = plays.index(max(plays))
+        a = plays.index(max(pa))
+        print(a)
         b = [i for i, value in enumerate(genres) if value == genres[a]]
-        
+        print(b)
         if len(b) == 1:
             answer.append(c)
         else:
-            b.sort(reverse=True)
+            b = b.sort(reverse=True)
             answer.append(b[0])
             answer.append(b[1])
+            
+        print(pa)
+        for j in b:
+            print(j)
 
-        while max(plays) in plays:
-            plays.remove(max(plays))
-
-        
     return answer
