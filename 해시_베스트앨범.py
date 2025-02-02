@@ -41,5 +41,4 @@ def solution(genres, plays):
         for j in b:
             pa[j] = 0
 
-            
     return answer
