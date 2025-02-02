@@ -42,3 +42,29 @@ def solution(genres, plays):
             pa[j] = 0
 
     return answer
+
+def solution(genres, plays):
+    answer = []
+    genre_play = {}  # 장르별 총 재생 횟수를 저장할 딕셔너리
+    song_list = {}   # 장르별 노래 정보를 저장할 딕셔너리
+
+    # 장르별 총 재생 횟수와 노래 정보를 저장
+    for i in range(len(genres)):
+        genre = genres[i]
+        play = plays[i]
+        if genre not in genre_play:
+            genre_play[genre] = 0
+            song_list[genre] = []
+        genre_play[genre] += play
+        song_list[genre].append((play, i))
+
+    # 장르를 총 재생 횟수에 따라 내림차순 정렬
+    sorted_genres = sorted(genre_play.keys(), key=lambda x: genre_play[x], reverse=True)
+
+    # 각 장르별로 노래를 재생 횟수에 따라 정렬하고, 최대 2곡 선택
+    for genre in sorted_genres:
+        songs = sorted(song_list[genre], key=lambda x: (-x[0], x[1]))
+        for i in range(min(2, len(songs))):
+            answer.append(songs[i][1])
+
+    return answer
