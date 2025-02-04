@@ -18,8 +18,6 @@ def solution(progresses, speeds):
             num += 1
         count.append(num)
     print(count)
-        
-    num = 1
     
     result = []
     current_max = count[0]
