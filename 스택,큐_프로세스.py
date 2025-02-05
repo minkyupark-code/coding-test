@@ -14,7 +14,5 @@
 
 def solution(priorities, location):
     a = []
-  
     answer = 0
-
     return answer
