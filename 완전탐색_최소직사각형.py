@@ -15,7 +15,6 @@
 
 '''
 
-
 def solution(sizes):
     answer=[0,0]
     for i in sizes:
