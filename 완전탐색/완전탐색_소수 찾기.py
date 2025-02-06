@@ -10,5 +10,13 @@
 '''
 
 def solution(numbers):
-    answer = 0
-    return answer
+    a = list(numbers)
+    
+        if n < 2:
+            continue
+        for i in range(2, int(n ** 0.5) + 1):
+            if n % i == 0:
+                continue
+        answer += 1
+    
+    return list(numbers)
