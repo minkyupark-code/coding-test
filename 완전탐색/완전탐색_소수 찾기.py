@@ -29,6 +29,5 @@ def solution(numbers):
             if j % i == 0:
                 break
         answer += 1
-        print(j)
     
     return answer
