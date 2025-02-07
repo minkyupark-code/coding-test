@@ -20,4 +20,4 @@ def solution(brown, yellow):
     for i in range(1,brown):
         if i * (brown-i) == yellow:
             print(i,(brown-i))
-            return sorted([i+2,(brown-i)+2])
+            return sorted([i+2,(brown-i)+2],reverse=True)
