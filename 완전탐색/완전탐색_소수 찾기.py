@@ -9,16 +9,26 @@
     "013"은 0, 1, 3 숫자가 적힌 종이 조각이 흩어져있다는 의미입니다.
 '''
 
+from itertools import permutations
+
 def solution(numbers):
     answer = 0
-    a = list(numbers)
+    
+    number_set = set()
+    str_numbers = list(map(str, numbers))
+    
+    for r in range(1, len(numbers) + 1):
+        for perm in permutations(str_numbers, r):
+            number_set.add(int(''.join(perm)))
+    
+    a = list(number_set)
     for j in a:
-        k = int(j)
-        if k < 2:
+        if j < 2:
             continue
-        for i in range(2, int(k ** 0.5) + 1):
-            if k % i == 0:
-                continue
+        for i in range(2, int(j ** 0.5) + 1):
+            if j % i == 0:
+                break
         answer += 1
+        print(j)
     
     return answer
