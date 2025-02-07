@@ -21,13 +21,13 @@ def solution(numbers):
         for perm in permutations(str_numbers, r):
             number_set.add(int(''.join(perm)))
     
-    a = list(number_set)
-    for j in a:
+    for j in number_set:
         if j < 2:
             continue
         for i in range(2, int(j ** 0.5) + 1):
             if j % i == 0:
                 break
-        answer += 1
+        else:
+            answer += 1
     
     return answer
