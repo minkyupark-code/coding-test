@@ -16,5 +16,11 @@ Leo가 본 카펫에서 갈색 격자의 수 brown,
 '''
 
 def solution(brown, yellow):
-    answer = []
-    return answer
+    brown = (brown -4)/2
+    for i in range(1,yellow):
+        print(i * (yellow-i))
+        if i * (yellow-i) == yellow:
+            print(i,(yellow-i))
+            break
+
+    return brown
