@@ -30,5 +30,3 @@ def solution(nums):
     return int(answer)
 
 print(solution([3,1,2,3]))
-
-print(solution([3,3,3,2,2,2]))
