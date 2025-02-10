@@ -24,7 +24,6 @@ solution 함수의 매개변수로 다리에 올라갈 수 있는 트럭 수 bri
 
 def solution(bridge_length, weight, truck_weights):
     bridge_length = []
-    
     weight = 0
     
     return answer
