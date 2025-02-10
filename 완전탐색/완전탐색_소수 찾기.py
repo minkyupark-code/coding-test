@@ -13,7 +13,6 @@ from itertools import permutations
 
 def solution(numbers):
     answer = 0
-    
     number_set = set()
     str_numbers = list(map(str, numbers))
     
