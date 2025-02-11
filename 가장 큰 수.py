@@ -8,9 +8,11 @@
 
 def solution(numbers):
     answer = []
+    
     for i in numbers:
         for i in str(i):
             answer.append(int(i))
+            
     answer.sort(reverse=True)
     
     return ''.join(map(str, answer))
