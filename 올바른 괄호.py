@@ -11,6 +11,7 @@
 
 def solution(s):
     q = list(s)
+    
     for i in range(len(q)):
         if q[i] == "(":
             q[i] = 1
@@ -18,6 +19,7 @@ def solution(s):
             q[i] = -1
             
     answer = 0
+    
     for j in range(len(q)):
         answer = q[j] + answer
         if answer < 0:
@@ -25,5 +27,6 @@ def solution(s):
 
     if answer == 0:
         return True
+        
     else:
         return False
