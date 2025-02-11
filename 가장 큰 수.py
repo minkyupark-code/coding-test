@@ -5,7 +5,6 @@
 '''
 
 
-
 def solution(numbers):
     answer = []
     
