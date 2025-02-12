@@ -18,6 +18,7 @@ from itertools import *
 
 def solution(k, dungeons):
     
+    a = k
     answer = 0
     a_list = list(permutations(dungeons, len(dungeons)))
     b_list = []
@@ -26,11 +27,13 @@ def solution(k, dungeons):
     for i in range(len(a_list)):
         
         for j in range(len(a_list[i])):
-            if k >= a_list[i][j][0]:
-                k = k - a_list[i][j][0]
+            if a >= a_list[i][j][0]:
+                a = a - a_list[i][j][0]
+                print(a)
                 answer += 1
 
         b_list.append(answer)
+        a = k
         answer = 0
     
     return b_list
