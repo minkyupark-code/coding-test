@@ -15,5 +15,12 @@ dungeons의 각 행은 각 던전의 ["최소 필요 피로도", "소모 피로�
 '''
 
 def solution(k, dungeons):
-    answer = -1
+    
+    answer = 0
+    
+    for i in range(len(dungeons)):
+        if k >= dungeons[i][0]:
+            k = k - dungeons[i][1]
+            answer += 1
+        
     return answer
