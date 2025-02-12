@@ -22,18 +22,16 @@ def solution(k, dungeons):
     answer = 0
     a_list = list(permutations(dungeons, len(dungeons)))
     b_list = []
-    print(a_list)
     
     for i in range(len(a_list)):
         
         for j in range(len(a_list[i])):
             if a >= a_list[i][j][0]:
-                a = a - a_list[i][j][0]
-                print(a)
+                a = a - a_list[i][j][1]
                 answer += 1
-
+                
         b_list.append(answer)
         a = k
         answer = 0
     
-    return b_list
+    return max(b_list)
