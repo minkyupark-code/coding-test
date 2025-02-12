@@ -16,4 +16,5 @@ def solution(prices):
     while stack:
         idx = stack.pop()
         answer[idx] = len(prices) - idx - 1
+        
     return answer
