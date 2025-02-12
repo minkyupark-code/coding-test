@@ -14,13 +14,23 @@ dungeons의 각 행은 각 던전의 ["최소 필요 피로도", "소모 피로�
 서로 다른 던전의 ["최소 필요 피로도", "소모 피로도"]가 서로 같을 수 있습니다.
 '''
 
+from itertools import *
+
 def solution(k, dungeons):
     
     answer = 0
+    a_list = list(permutations(dungeons, len(dungeons)))
+    b_list = []
+    print(a_list)
     
-    for i in range(len(dungeons)):
-        if k >= dungeons[i][0]:
-            k = k - dungeons[i][1]
-            answer += 1
+    for i in range(len(a_list)):
         
-    return answer
+        for j in range(len(a_list[i])):
+            if k >= a_list[i][j][0]:
+                k = k - a_list[i][j][0]
+                answer += 1
+
+        b_list.append(answer)
+        answer = 0
+    
+    return b_list
