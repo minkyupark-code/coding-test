@@ -8,7 +8,6 @@
 
 '''
 
-
 def solution(s):
     q = list(s)
     
