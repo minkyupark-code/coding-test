@@ -35,3 +35,4 @@ def solution(k, dungeons):
         answer = 0
     
     return max(b_list)
+    
