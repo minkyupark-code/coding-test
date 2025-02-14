@@ -14,6 +14,7 @@ numbers의 원소는 0 이상 1,000 이하입니다.
 
 def solution(numbers):
     answer = []
+    result = ""
     a = ""
     for i in numbers:
         a = str(i)
@@ -21,5 +22,17 @@ def solution(numbers):
             while int(a) < 100:
                 a = a + a[-1]
                 print(a)
-
-    return answer
+            answer.append(a)
+    sorted_score = sorted(answer, reverse = True) 
+    ranks = [sorted_score.index(s) + 1 for s in answer]
+    print(ranks)
+    a = {}
+    for j in ranks:
+        a[j] = numbers[j-1]
+    
+    print(a)
+    for k in range(len(a)):
+        b = str(a[k+1])
+        result = result + b
+        
+    return result
