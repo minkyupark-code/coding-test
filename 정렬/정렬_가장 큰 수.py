@@ -14,7 +14,12 @@ numbers의 원소는 0 이상 1,000 이하입니다.
 
 def solution(numbers):
     answer = []
+    a = ""
     for i in numbers:
-            answer.append(str(i)[0])
-    
+        a = str(i)
+        if int(a) < 100:
+            while int(a) < 100:
+                a = a + a[-1]
+                print(a)
+
     return answer
