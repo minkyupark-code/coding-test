@@ -17,7 +17,9 @@ Leo가 본 카펫에서 갈색 격자의 수 brown,
 
 def solution(brown, yellow):
     brown = (brown - 4) // 2
+    
     for i in range(1,brown):
+        
         if i * (brown-i) == yellow:
             print(i,(brown-i))
             return sorted([i+2,(brown-i)+2],reverse=True)
