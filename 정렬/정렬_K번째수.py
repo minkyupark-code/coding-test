@@ -18,7 +18,9 @@ commands의 각 원소는 길이가 3입니다.
 def solution(array, commands):
     answer = []
     num = []
+
     for i in commands:
         num = sorted(array[i[0]-1:i[1]])
         answer.append(num[i[2]-1])
+        
     return answer
