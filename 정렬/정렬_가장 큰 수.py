@@ -21,7 +21,6 @@ def solution(numbers):
         if int(a) < 100:
             while int(a) < 100:
                 a = a + a[-1]
-                print(a)
             answer.append(a)
     sorted_score = sorted(answer, reverse = True) 
     ranks = [sorted_score.index(s) + 1 for s in answer]
