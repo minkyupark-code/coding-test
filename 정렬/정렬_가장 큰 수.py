@@ -16,6 +16,7 @@ def solution(numbers):
     answer = []
     result = ""
     a = ""
+    
     for i in numbers:
         a = str(i)
         if int(a) < 100:
