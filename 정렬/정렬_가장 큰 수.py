@@ -28,11 +28,10 @@ def solution(numbers):
     ranks = [sorted_score.index(s) + 1 for s in answer]
     print(ranks)
     a = {}
-    
+
     for j in ranks:
         a[j] = numbers[j-1]
     
-    print(a)
     for k in range(len(a)):
         b = str(a[k+1])
         result = result + b
