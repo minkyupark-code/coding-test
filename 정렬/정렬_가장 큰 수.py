@@ -16,17 +16,19 @@ def solution(numbers):
     answer = []
     result = ""
     a = ""
-    
+
     for i in numbers:
         a = str(i)
         if int(a) < 100:
             while int(a) < 100:
                 a = a + a[-1]
             answer.append(a)
+
     sorted_score = sorted(answer, reverse = True) 
     ranks = [sorted_score.index(s) + 1 for s in answer]
     print(ranks)
     a = {}
+    
     for j in ranks:
         a[j] = numbers[j-1]
     
