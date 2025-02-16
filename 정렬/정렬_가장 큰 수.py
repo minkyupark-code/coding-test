@@ -26,7 +26,6 @@ def solution(numbers):
 
     sorted_score = sorted(answer, reverse = True) 
     ranks = [sorted_score.index(s) + 1 for s in answer]
-    print(ranks)
     a = {}
 
     for j in ranks:
