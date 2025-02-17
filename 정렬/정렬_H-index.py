@@ -13,5 +13,4 @@ H-Index는 과학자의 생산성과 영향력을 나타내는 지표입니다. 
 def solution(citations):
 
     answer = 0
-    
     return answer 
