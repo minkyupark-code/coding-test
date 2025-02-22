@@ -20,6 +20,7 @@ def solution(k, dungeons):
     
     a = k
     answer = 0
+    
     a_list = list(permutations(dungeons, len(dungeons)))
     b_list = []
     
