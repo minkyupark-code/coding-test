@@ -24,7 +24,6 @@ def solution(k, dungeons):
     b_list = []
     
     for i in range(len(a_list)):
-        
         for j in range(len(a_list[i])):
             if a >= a_list[i][j][0]:
                 a = a - a_list[i][j][1]
