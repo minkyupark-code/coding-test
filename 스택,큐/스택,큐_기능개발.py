@@ -10,6 +10,7 @@ def solution(progresses, speeds):
     rel = 0
     num = 0
     count = []
+    
     for i in range(len(speeds)):
         num = 0
         rel = progresses[i]
