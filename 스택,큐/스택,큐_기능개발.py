@@ -18,8 +18,7 @@ def solution(progresses, speeds):
             rel += speeds[i]
             num += 1
         count.append(num)
-    print(count)
-    
+        
     result = []
     current_max = count[0]
     num = 1
