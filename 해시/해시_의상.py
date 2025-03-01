@@ -24,6 +24,7 @@ clothes의 모든 원소는 문자열로 이루어져 있습니다.
 
 def solution(clothes):
     clothes_table = []
+    
     for i in range(len(clothes)):
         clothes_table.append(clothes[i][1])
     
@@ -37,6 +38,7 @@ def solution(clothes):
 
     a = 1
     b = list(b_count.values())
+    
     for j in range(len(b)):
         a = a * (b[j] + 1)
     
