@@ -17,6 +17,7 @@ commands의 각 원소는 길이가 3입니다.
 
 def solution(array, commands):
     answer = []
+    
     num = []
 
     for i in commands:
