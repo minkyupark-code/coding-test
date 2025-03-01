@@ -26,5 +26,3 @@ def solution(numbers, target):
             queue.append((index + 1, current_sum - numbers[index]))
 
     return count
-
-solution([4, 1, 2, 1], 4)
