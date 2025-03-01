@@ -20,15 +20,16 @@ def solution(genres, plays):
     answer = []
     c = {}
     pa = plays
+    
     for h in range(len(genres)):
         c[genres[h]].append(plays[h])
-    print(c)
     
     for i in plays:
         a = plays.index(max(pa))
-        print(a)
+        
         if a == 0:
             break
+            
         b = [i for i, value in enumerate(genres) if value == genres[a]]
         if len(b) == 1:
             answer.append(c)
