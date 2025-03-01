@@ -18,6 +18,7 @@ def solution(numbers, target):
         index, current_sum = queue.popleft()
 
         if index == len(numbers):
+            
             if current_sum == target:
                 count += 1
         else:
