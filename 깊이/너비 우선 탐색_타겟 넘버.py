@@ -21,6 +21,7 @@ def solution(numbers, target):
             
             if current_sum == target:
                 count += 1
+                
         else:
             queue.append((index + 1, current_sum + numbers[index]))
             queue.append((index + 1, current_sum - numbers[index]))
