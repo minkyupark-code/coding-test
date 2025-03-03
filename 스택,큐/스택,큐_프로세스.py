@@ -22,9 +22,9 @@ def solution(priorities, location):
         current = queue.popleft()
         
         if any(current[1] < process[1] for process in queue):
-            queue.append(current)  # 우선순위가 높은 프로세스가 있으면 다시 큐에 넣음
+            queue.append(current)
         else:
-            execution_order += 1  # 실행 횟수 증가
+            execution_order += 1
             if current[0] == location:
-                return execution_order  # 목표 프로세스가 실행되면 실행 순서 반환
+                return execution_order
 
