@@ -15,13 +15,12 @@
 from collections import deque
 
 def solution(priorities, location):
-    queue = deque(enumerate(priorities))  # (index, priority) 형태로 큐 생성
-    execution_order = 0  # 실행 순서를 저장할 변수
+    queue = deque(enumerate(priorities))
+    execution_order = 0
     
     while queue:
         current = queue.popleft()
         
-        # 현재 프로세스보다 우선순위가 높은 프로세스가 있는지 확인
         if any(current[1] < process[1] for process in queue):
             queue.append(current)  # 우선순위가 높은 프로세스가 있으면 다시 큐에 넣음
         else:
