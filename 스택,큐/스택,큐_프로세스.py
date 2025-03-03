@@ -12,8 +12,20 @@
 해당 프로세스가 몇 번째로 실행되는지 return 하도록 solution 함수를 작성해주세요.
 '''
 
+from collections import deque
+
 def solution(priorities, location):
-    a = []
-    answer = 0
-  
-    return answer
+    queue = deque(enumerate(priorities))  # (index, priority) 형태로 큐 생성
+    execution_order = 0  # 실행 순서를 저장할 변수
+    
+    while queue:
+        current = queue.popleft()
+        
+        # 현재 프로세스보다 우선순위가 높은 프로세스가 있는지 확인
+        if any(current[1] < process[1] for process in queue):
+            queue.append(current)  # 우선순위가 높은 프로세스가 있으면 다시 큐에 넣음
+        else:
+            execution_order += 1  # 실행 횟수 증가
+            if current[0] == location:
+                return execution_order  # 목표 프로세스가 실행되면 실행 순서 반환
+
