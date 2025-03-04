@@ -15,6 +15,5 @@ wires의 각 원소는 [v1, v2] 2개의 자연수로 이루어져 있으며, 이
 '''
 
 def solution(n, wires):
-    
     answer = -1
     return answer
