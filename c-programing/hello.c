@@ -6,8 +6,6 @@ void swap(int *a, int *b){
     *b = temp;
 }
 
-
-
 int main(void)
 {
     int a,b;
