@@ -13,5 +13,4 @@ def solution(numbers):
             answer.append(int(i))
             
     answer.sort(reverse=True)
-    
     return ''.join(map(str, answer))
